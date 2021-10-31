@@ -1,0 +1,173 @@
+
+$mainColor:rgb(219, 109, 6);
+$backgroundColor:rgb(189, 187, 187);
+body{
+  button{
+    margin-left: 3px;
+    border-radius: 8%;
+    &:hover{
+      cursor: pointer;
+      color: $mainColor;
+      font-weight: 600;
+    }
+  }
+  .searchText{
+    background-color: $mainColor;
+  }
+  .onOff{
+    display: none;
+  }
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #EFC347, #A46A06);
+  .bats{
+    display: none;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .container{
+    z-index: 1;
+    font-family: 'Irish Grover', cursive;
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 1175px;
+    background: linear-gradient(to bottom right, #9D9FA4, #0B0C0B);
+    header{
+      margin-top: 10px;
+      h1{
+          color:$mainColor;
+          text-align: center;
+          font-family: 'Fruktur', cursive;
+      }
+    }
+    
+    .noSee{
+      display: none;
+    }
+    a{
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .postsCont{
+      position: relative;
+      .pumpking1{
+        position:fixed;
+        top:80%;
+        left: 5%;
+      
+        
+      }
+      .pumpking2{
+        position:fixed;
+        top:50%;
+        left:80%
+        }
+    
+      .pumpking3{
+        position:fixed;
+        top:-17px;
+        
+      }
+      .searchCont{
+        position: relative;
+        input{
+          border-radius: 8%;
+          border-top: solid 2px black;
+          border-left: solid 2px black;
+          background-color: $backgroundColor;
+        
+        }
+        select{
+          border-radius: 8%;
+          background-color: $backgroundColor;
+          border-top: solid 2px black;
+          border-left: solid 2px black;
+          color:gray;
+  
+        }
+        margin-bottom: 5px;
+          padding: 10px;
+          display: flex;
+          flex-direction: row;
+      }
+      .posts{
+        position: relative;
+        line-height: 30px;
+        .onePostCont{
+    
+          .buttonSpan{
+            background-color: $backgroundColor;
+            border-radius: 8%;
+            padding: 5px;
+            &:hover{
+              color: $mainColor;
+              cursor: pointer;
+              font-weight: 600;
+            }
+          }
+          border-bottom: solid 1px white;
+          .onePost{
+            
+            margin-bottom: 5px;
+            padding: 10px;
+            span{
+              font-weight: 600;
+            }
+            .title{
+              font-family: 'Fruktur';
+              
+            }
+          } 
+        }
+        .paginations{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          button{
+            display: flex;
+          }
+          .noButton{
+            display:none
+          }
+          .isActive{
+            color:$mainColor;
+            background-color: gray;
+          }
+        }
+      } 
+    }
+  }
+}
+@media (min-width:740px) {
+  body{
+    .bats{
+      display: inline-block;
+     
+    }
+
+    .onOff{
+      display: block;
+      background-color: $backgroundColor;
+      font-family: 'Fruktur', cursive ;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 100px;
+      position: fixed;
+      left: 3%;
+      box-shadow: 0px 5px 5px rgb(49, 48, 48);
+      &:hover{
+        cursor: pointer;
+        color: $mainColor;
+        font-weight: 600;
+        box-shadow: 0px 10px 10px rgb(49, 48, 48);
+      }
+      &:active{
+        box-shadow: 0px 0px 0px rgb(49, 48, 48);
+      }
+    }
+    
+  }
+  
+}
